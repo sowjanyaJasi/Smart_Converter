@@ -1,0 +1,6 @@
+framework module Pods_Smart_Converter_Smart_ConverterUITests {
+  umbrella header "Pods-Smart Converter-Smart ConverterUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

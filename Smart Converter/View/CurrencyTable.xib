@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencyTableVC" customModule="PayPayCurrency" customModuleProvider="target">
+            <connections>
+                <outlet property="currencyTable" destination="VMo-Rz-wwr" id="hJH-EO-Dif"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="RemoveHomeApplianceAlertSercice" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-T5-nJI">
+                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Currency Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUX-BE-vBn">
+                            <rect key="frame" x="105.66666666666669" y="9.3333333333333304" width="182" height="21.666666666666671"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83k-1e-u5h">
+                            <rect key="frame" x="329" y="0.0" width="56" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="n49-X2-2oF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tapOnCancelBtn:" destination="-1" eventType="touchUpInside" id="YIB-Rs-PQ8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="83k-1e-u5h" secondAttribute="trailing" constant="8" id="0P8-m0-ydC"/>
+                        <constraint firstItem="EUX-BE-vBn" firstAttribute="centerY" secondItem="uzg-T5-nJI" secondAttribute="centerY" id="98B-aS-i1i"/>
+                        <constraint firstItem="83k-1e-u5h" firstAttribute="centerY" secondItem="uzg-T5-nJI" secondAttribute="centerY" id="JeD-f3-wx8"/>
+                        <constraint firstItem="EUX-BE-vBn" firstAttribute="centerX" secondItem="uzg-T5-nJI" secondAttribute="centerX" id="S9k-AP-Bzc"/>
+                        <constraint firstAttribute="height" constant="40" id="lKr-as-q3L"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VMo-Rz-wwr">
+                    <rect key="frame" x="0.0" y="99" width="393" height="719"/>
+                    <color key="backgroundColor" name="PrimaryBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="V0k-0D-JUP"/>
+                        <outlet property="delegate" destination="-1" id="Y7b-cQ-K48"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uzg-T5-nJI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5zw-vy-jfS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VMo-Rz-wwr" secondAttribute="trailing" id="60F-LZ-8Yc"/>
+                <constraint firstItem="VMo-Rz-wwr" firstAttribute="top" secondItem="uzg-T5-nJI" secondAttribute="bottom" id="MsH-ib-eXv"/>
+                <constraint firstItem="uzg-T5-nJI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="N6S-qh-Uuh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="VMo-Rz-wwr" secondAttribute="bottom" id="Rda-mb-sG8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uzg-T5-nJI" secondAttribute="trailing" id="TMZ-BN-2Nz"/>
+                <constraint firstItem="VMo-Rz-wwr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n8W-eL-DIS"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="107.74647887323944"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
